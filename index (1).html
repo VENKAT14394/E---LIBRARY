@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<title>Login Page</title>
+	<style>
+	  body {
+	background-color: rgb(155, 204, 173);
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	background-color:whitesmoke;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	margin: 20px auto;
+	padding: 20px;
+	text-align: center;
+	width: 500px;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+form label {
+	display: block;
+	margin-bottom: 5px;
+	text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #333;
+	border: none;
+	border-radius: 3px;
+	color: #fff;
+	cursor: pointer;
+	padding: 10px;
+	width: 100%;
+}
+
+a {
+	display: block;
+	margin-top: 10px;
+}
+.heading{
+text-align:center;
+color:black;
+}
+
+	</style>
+</head>
+<body>
+	<div class="d-flex flex-row justify-content-center">
+      <h1 class="heading">
+		<img src="icon2.png"   style="height:80px; width: 80px;" >
+      E- LIBRARY MANGAMENT SYSTEM</h1><br>
+      </div>
+ 	<div class="container">
+		<h1>Login</h1>
+		<form action="login.php" method="POST">
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username">
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password">
+
+			<input type="submit" value="Login" name="login">
+            <a href="C:\Users\Administrator\Desktop\manoj\home.html"></a>
+		</form>
+		<a href="file:///C:/Users/91799/Desktop/Manoj/regirstration.html">Don't have an account? Register here.</a>
+	</div>
+<img src="https://www.pngegg.com/en/search?q=library" style="height:100px;">
+
+</body>
+</html>

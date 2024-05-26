@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library Management System - Computer Science Department</title>
+    <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+    <style>
+       body {
+    background-color: rgb(137, 219, 215);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li:hover {
+    background-color: #555;
+  }
+  
+  /* Dropdown button style */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.book {
+  width: 25%;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 5px #888888;
+}
+
+.book img {
+  width: 100%;
+  height:auto;
+}
+
+.book h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.book p {
+  margin: 5px 0;
+}
+
+.btn {
+  background-color:lightsalmon;
+  color: #fff;
+  border: none;
+  padding: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn:hover {
+  background-color:black;
+}
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+a {
+  color: #fff;
+  font-size: 24px;
+}
+
+.fab {
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+}
+
+.fab:hover {
+  transform: scale(1.1);
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>E- LIBRARY MANGAMENT SYSTEM  </h1>
+      <img src="https://img.icons8.com/dusk/1x/library.png"   style="height:80px; width: 80px;" >
+          <nav>
+      <ul>
+          <li><a href="file:///C:/Users/91799/Desktop/Manoj/homepage.html">Home</a></li>
+          <li><a href="file:///C:/Users/91799/Desktop/Manoj/index.html">Login</a></li>
+          <li class="dropdown">
+            <a href="#">Departments</a>
+            <div class="dropdown-content">
+              <a href="file:///C:/Users/91799/Desktop/Manoj/civil.html">Civil Engineering</a>
+              <a href="file:///C:/Users/91799/Desktop/Manoj/mech.html">Mechanical Engineering</a>
+              <a href="file:///C:/Users/91799/Downloads/eee%20(1).html">Electrical Engineering</a>
+              <a href="file:///C:/Users/91799/Desktop/Manoj/cs.html">Computer science Engineering</a>
+            </div>
+          </li>
+          <li><a href="file:///C:/Users/91799/Desktop/Manoj/feedback%20form.html">Feedback</a></li>
+          <li><a href="file:///C:/Users/91799/Desktop/Manoj/contact%20(1).html">Contact Us</a></li>
+        </ul>
+    </nav>
+  </header>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Function to display book details
+      function displayBookDetails(title, author, publisher, isbn) {
+        alert(`Book Details:\nTitle: ${title}\nAuthor: ${author}\nPublisher: ${publisher}\nISBN: ${isbn}`);
+      }
+
+      // Add click event listeners to each book
+      const bookContainers = document.querySelectorAll('.book');
+      bookContainers.forEach(bookContainer => {
+        bookContainer.addEventListener('click', function() {
+          // Get book details from the clicked book
+          const bookTitle = this.querySelector('h3').innerText;
+          const bookAuthor = this.querySelector('p:nth-child(2)').innerText;
+          const bookPublisher = this.querySelector('p:nth-child(3)').innerText;
+          const bookISBN = this.querySelector('p:nth-child(4)').innerText;
+
+          // Display book details
+          displayBookDetails(bookTitle, bookAuthor, bookPublisher, bookISBN);
+        });
+      });
+    });
+  </script>
+  
+    <main>
+      <h2>Computer Science Engineering Department</h2>
+      <p>Welcome to the Computer Science Engineering Department page of our library management system. Here, you can find information about the books available in our collection, as well as the books currently checked out by students and faculty members.</p>
+      <p>Computer science engineering books typically focus on the principles and practices involved in the design,
+        development, and maintenance of software and hardware systems.
+" by Abraham Silberschatz, Henry F. Korth, and S. Sudarshan, "Computer
+        Networking: A Top-Down Approach" by James F. Kurose and Keith W. Ross, and "Artificial Intelligence: A Modern
+        Approach" by Stuart Russell and Peter Norvig.</p>
+      
+      <h3>Books Available in the Computer Science Engineering Department</h3>
+    </main>
+    <div class="book-container">
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/41vLer1KbmL._SX437_BO1,204,203,200_.jpg" alt="Book 1"style="height: 300px; width: 300px;">
+        <h3>Introduction to Algorithms</h3>
+        <p>Author:ThomasH.cormen </p>
+        <p>Publisher:The MIT Press </p>
+        <p>ISBN:978-0262046305</p>
+        <a href="https://a.co/d/d9JJN9Q" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+      
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/51WWOcqo1CL._SX258_BO1,204,203,200_.jpg" alt="Book 2"style="height: 300px; width: 300px;">
+        <h3>Computer Networks</h3>
+        <p>Author: Andrew S. Tanenbaum and David J. Wetherall.</p>
+        <p>Publisher:Prentice Hall, Indian International Ed </p>
+        <p>ISBN:978-9332518742 </p>
+        <a href="https://a.co/d/7a9cdg4" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+      
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/41+cspJiqCL._SX258_BO1,204,203,200_.jpg" alt="Book 3"style="height: 300px; width: 300px;">
+        <h3>Database System Concepts </h3>
+        <p>Author:Abraham Silberschatz, Henry F. Korth, and S. Sudarshan </p>
+        <p>Publisher: McGraw Hill; </p>
+        <p>ISBN:978-0073523323</p>
+        <a href="https://a.co/d/eUhYTfF" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+      
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/51e6AcENW7L._SY344_BO1,204,203,200_.jpg" alt="Book 4"style="height: 300px; width: 300px;">
+        <h3>Operating System Concepts</h3>
+        <p>Author:Abraham Silberschatz, Greg Gagne, and Peter B. Galvin .</p>
+        <p>Publisher:Wiley;  </p>
+        <p>ISBN: 978-1118804926 </p>
+        <a href="https://a.co/d/cTL2iyg" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+      
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/51V7jnPK+7L._SX258_BO1,204,203,200_.jpg" alt="Book 5"style="height: 300px; width: 300px;">
+        <h3>Artificial Intelligence</h3>
+        <p>Author: Stuart Russell and Peter Norvig </p>
+        <p>Publisher:Pearson</p>
+        <p>ISBN:978-0134610993 </p>
+        <a href="https://a.co/d/7MmqMPi" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/41qeBu53aPS._SX402_BO1,204,203,200_.jpg" alt="Book 6"style="height: 300px; width: 300px;">
+        <h3>Computer Architecture</h3>
+        <p>Author: John L. Hennessy and David A. Patterson</p>
+        <p>Publisher:Morgan Kaufmann</p>
+        <p>ISBN:978-0128119051</p>
+        <a href="https://a.co/d/63TGH6s" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+    </div>
+    <footer>
+      <p>FOLLOW US ON</p><br>
+    <ul>
+      <li><a href="https://www.facebook.com/swamy.palacharla.3"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a></li>
+      <li><a href="https://www.instagram.com/mr_vicky__94/"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/palacharla-swamy-aa0054235/"><i class="fab fa-linkedin"></i></a></li>
+    </ul><br>
+    <p>&copy; 2023 E-LIBRARY MANAGEMENT SYSTEM. All Rights Reserved.</p>
+  </footer>
+  
+      </body>
+</html>

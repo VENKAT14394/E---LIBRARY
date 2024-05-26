@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-LIBRARY MANAGEMENT SYSTEM</title>
+  <link rel="icon" type="image/x-icon" href="https://e7.pngegg.com/pngimages/867/61/png-clipart-library-signage-state-library-of-victoria-meridian-district-library-central-library-public-library-american-library-association-books-and-pens-text-comic-book.png">
+  <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: rgb(189, 218, 197);
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #3a3232;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+    }
+
+    nav ul li {
+      display: inline-block;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav ul li:hover {
+      background-color: #89897b;
+    }
+
+    /* Dropdown button style */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      display: block;
+      background-color: #f1f1f1;
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 50px;
+      text-align: center;
+      color: black;
+    }
+
+    .ce {
+      color: black;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 50px;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    .me {
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 50px;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    .ee {
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 50px;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    .cse {
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 50px;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    .btn {
+      background-color: rgb(233, 134, 98);
+      color: #fff;
+      border: none;
+      padding: 5px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    section {
+      border: 2px solid black;
+      padding: 20px;
+      margin-bottom: 50px;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    button {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-decoration: none;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    .department {
+      border: 2px solid black;
+      text-align: center;
+    }
+
+    .book-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 20px, 0;
+    }
+
+    .book {
+      width: 20%;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    .book img {
+      width: 100%;
+      height: auto;
+    }
+
+    .book h3 {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .book p {
+      margin: 5px 0;
+    }
+
+    .book a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .book a:hover {
+      text-decoration: none;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    a {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .fab {
+      display: inline-block;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      color: #333;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .fab:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>E- LIBRARY MANGAMENT SYSTEM </h1>
+    <img src="icon2.png" style="height:80px; width: 80px;">
+    <nav>
+      <ul>
+        <li><a href="file:///C:/Users/91799/Desktop/Manoj/homepage.html">Home</a></li>
+        <li><a href="file:///C:/Users/91799/Desktop/Manoj/index.html">Login</a></li>
+        <li class="dropdown">
+          <a href="#">Departments</a>
+          <div class="dropdown-content">
+            <a href="file:///C:/Users/91799/Desktop/Manoj/civil.html">Civil Engineering</a>
+            <a href="file:///C:/Users/91799/Desktop/Manoj/mech.html">Mechanical Engineering</a>
+            <a href="file:///C:/Users/91799/Downloads/eee%20(1).html">Electrical Engineering</a>
+            <a href="file:///C:/Users/91799/Desktop/Manoj/cs.html">Computer science Engineering</a>
+          </div>
+        </li>
+        <li><a href="file:///C:/Users/91799/Desktop/Manoj/feedback%20form.html">Feedback</a></li>
+        <li><a href="file:///C:/Users/91799/Desktop/Manoj/contact%20(1).html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Welcome to E- LIBRARY MANGAMENT SYSTEM</h2>
+    <p>Here, you can find information about the books available in our collection, as well as the books currently
+      checked out by students and faculty members.</p>
+    <section>
+      <h2>About Us</h2>
+      <p>We are a specialized library that supports the research and learning needs of students, faculty, and staff in
+        the engineering department. Our collection includes a wide range of books, journals, and other resources related
+        to engineering fields such as civil, mechanical, electrical, and more.</p>
+    </section>
+  </main>
+  <div class="cse">
+    <h2>Civil Engineering</h2>
+      </div>
+      <div class="book-container">
+        <div class="book">
+          <img src="https://m.media-amazon.com/images/I/517WEdy8GsL._SX258_BO1,204,203,200_.jpg" alt="Book 1"style="height: 300px; width: 300px;">
+          <h3>Structural Analysis and Design</h3>
+          <p>Author: Taranath, Bungale S.</p>
+          <p>Publisher: CRC Press</p>
+          <p>ISBN: 9781133943891</p>
+          <a href="https://www.amazon.com/dp/1133943896" target="_blank" class="btn">Buy on Amazon</a>
+        </div>
+        
+        <div class="book">
+          <img src="https://m.media-amazon.com/images/I/51ie-nD+15L._SX258_BO1,204,203,200_.jpg" alt="Book 2"style="height: 300px; width: 300px;">
+          <h3>Geotechnical Engineering</h3>
+          <p>Author: Das, Braja M.</p>
+          <p>Publisher: Cengage Learning</p>
+          <p>ISBN: 9781133108665</p>
+          <a href="https://www.amazon.com/dp/1133108660" target="_blank" class="btn">Buy on Amazon</a>
+        </div>
+        
+        
+        <div class="book">
+          <img src="https://m.media-amazon.com/images/I/51dM9a1r61L._SX260_.jpg" alt="Book 4"style="height: 300px; width: 300px;">
+          <h3>Water Resources Engineering</h3>
+          <p>Author: Chin, David A.</p>
+          <p>Publisher: Wiley</p>
+          <p>ISBN: 9781118742299</p>
+          <a href="https://a.co/d/aCY20WT" target="_blank" class="btn">Buy on Amazon</a>
+        </div>
+        
+    </div>
+  </div>
+
+  <div class="cse">
+    <h2>ComputerEngineering</h2>
+    <div class="book-container">
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/41vLer1KbmL._SX437_BO1,204,203,200_.jpg" alt="Book 1"
+          style="height: 300px; width: 300px;">
+        <h3>Introduction to Algorithms</h3>
+        <p>Author:ThomasH.cormen </p>
+        <a href="https://a.co/d/d9JJN9Q" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/41+cspJiqCL._SX258_BO1,204,203,200_.jpg" alt="Book 3"
+          style="height: 300px; width: 300px;">
+        <h3>Database System Concepts </h3>
+        <p>Author:Abraham Silberschatz, Henry F. Korth, and S. Sudarshan </p>
+        <a href="https://a.co/d/eUhYTfF" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/51e6AcENW7L._SY344_BO1,204,203,200_.jpg" alt="Book 4"
+          style="height: 300px; width: 300px;">
+        <h3>Operating System Concepts</h3>
+        <p>Author:Abraham Silberschatz, Greg Gagne, and Peter B. Galvin .</p>
+        <a href="https://a.co/d/cTL2iyg" target="_blank" class="btn">Buy on Amazon</a>
+      </div>
+    </div>
+  </div>
+
+
+  <footer>
+    <p>FOLLOW US ON</p><br>
+    <ul>
+      <li><a href="https://www.facebook.com/manojkumar.aragatla.9?mibextid=ZbWKwL"><i class="fab fa-facebook"></i></a>
+      </li>
+      <li><a href="https://twitter.com/its_manojkumaar?t=AFy0jzcq8TK57uGQgD9Y6Q&s=09"><i class="fab fa-twitter"></i></a>
+      </li>
+      <li><a href="https://www.instagram.com/maanojkumarr_/?igshid=ZDdkNTZiNTM%3D"><i class="fab fa-instagram"></i></a>
+      </li>
+      <li><a href="https://www.linkedin.com/in/manoj-kumar-1b8861267?original_referer="><i
+            class="fab fa-linkedin"></i></a></li>
+    </ul><br>
+    <p>&copy; 2023 E-LIBRARY MANAGEMENT SYSTEM. All Rights Reserved.</p><br>
+  </footer>
+
+</body>
+
+</html>
